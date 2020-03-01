@@ -27,13 +27,13 @@ function addItem(inputValue){
 
 
 
-$('.shopping-item-toggle').on('click', e => {
+$('.shopping-list').on('click', '.shopping-item-toggle',  e => {
     e.preventDefault();
-    $(event.currentTarget).closest('li').toggleClass('shopping-item__checked');
+    $(e.currentTarget).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
 })
 
-$('.shopping-item-delete').on('click', e => {
+$('.shopping-list').on('click','.shopping-item-delete', e => {
     e.preventDefault();
-    $(event.currentTarget).closest('li').remove();
+    $(e.currentTarget).closest('li').remove();
 })
 
